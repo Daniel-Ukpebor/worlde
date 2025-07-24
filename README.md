@@ -9,7 +9,7 @@ Get feedback for each letter:
 - 🟨 Correct letter in the wrong spot  
 - ⬜ Letter not in the word at all
 
-Game Online - https://www.onlineide.pro/share/37e79ba1-fc95-4e1a-9d54-8bd84dc31a4a
+Game Online - [Game](https://www.onlineide.pro/share/37e79ba1-fc95-4e1a-9d54-8bd84dc31a4a)
 
 
 
