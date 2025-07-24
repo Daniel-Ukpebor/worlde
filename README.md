@@ -1,7 +1,7 @@
 # worldePythonRecreation
 # Worlde 🟩🟨⬜
 
-A simple terminal-based Wordle clone written in Python.
+A simple onlineIDE-based Wordle clone written in Python.
 
 Guess the 5-letter secret word in 6 tries!  
 Get feedback for each letter:
