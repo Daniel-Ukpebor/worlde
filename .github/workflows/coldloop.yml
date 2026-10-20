@@ -1,0 +1,31 @@
+name: ColdLoop validation
+on:
+  push:
+    paths: ['coldloop/**', '.github/workflows/coldloop.yml']
+  pull_request:
+    paths: ['coldloop/**', '.github/workflows/coldloop.yml']
+jobs:
+  laboratory:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: coldloop
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: coldloop/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: npm test
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser
+        env:
+          PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH: managed
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: coldloop-browser-failures
+          path: coldloop/test-results
