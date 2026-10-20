@@ -43,7 +43,7 @@ Default parameters, seed 42, 600 s after-school rush, eight 120 g orders, fixed 
 
 The adaptive controller is worse on these selected metrics for this condition. Different sensor/demand/parameter choices can change the outcome. The UI makes no universal winner claim. Energy closure verifies bookkeeping within the model, not physical fidelity.
 
-GitHub Actions configuration is supplied; workflow execution and public deployment have not been independently verified from this environment. Other browsers, physical mobile devices, physical refrigeration hardware, food texture, sensor calibration, and fresh-task snapshot restoration were not validated. Production and formatting checks are recorded below.
+GitHub Actions validation passed on the first pushed commit. The initial Pages workflow failed because GitHub Pages was not enabled for the repository; public deployment has not been verified. Other browsers, physical mobile devices, physical refrigeration hardware, food texture, sensor calibration, and fresh-task snapshot restoration were not validated. Production and formatting checks are recorded below.
 
 ## Final production and setup checks
 
